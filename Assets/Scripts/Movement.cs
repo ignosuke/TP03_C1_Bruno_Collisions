@@ -16,9 +16,6 @@ public class Movement : MonoBehaviour
     private const float maxSpeed = 20f;
     private float speed = 5f;
 
-    public float GetSpeed() => speed;
-    public void SetSpeed(float newSpeed) => speed = Mathf.Clamp(newSpeed, minSpeed, maxSpeed);
-
     private Rigidbody2D rb;
 
     private void Awake()
@@ -105,5 +102,15 @@ public class Movement : MonoBehaviour
     {
         if (id == playerId)
             SetSpeed(value);
+    }
+
+    public float GetSpeed() 
+    {
+        return speed;
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        speed = Mathf.Clamp(newSpeed, minSpeed, maxSpeed);
     }
 }

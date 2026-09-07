@@ -5,8 +5,6 @@ public class ColorChanger : MonoBehaviour
     [SerializeField] private PlayerData.ID playerId;
 
     private SpriteRenderer sr;
-    public Color GetColor() => sr.color;
-    public void SetColor(Color newColor) => sr.color = newColor;
 
     private void Awake()
     {
@@ -33,5 +31,10 @@ public class ColorChanger : MonoBehaviour
     {
         if (id == playerId)
             SetColor(value);
+    }
+
+    public void SetColor(Color newColor)
+    {
+        sr.color = newColor;
     }
 }

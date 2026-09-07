@@ -8,6 +8,9 @@ public class SizeChanger : MonoBehaviour
     private const float maxWidth = 3f;
     private float width = 2f;
 
+    public float GetWidth() => width;
+    public void SetWidth(float newWidth) => width = Mathf.Clamp(newWidth, minWidth, maxWidth);
+
     private SpriteRenderer sr;
 
     private void Awake()
@@ -35,11 +38,5 @@ public class SizeChanger : MonoBehaviour
     {
         if (id == playerId)
             SetWidth(value);
-    }
-
-    public void SetWidth(float newWidth)
-    {
-        width = Mathf.Clamp(newWidth, minWidth, maxWidth);
-        sr.size = new Vector2(width, sr.size.y);
     }
 }

@@ -20,6 +20,7 @@ public class SizeChanger : MonoBehaviour
         SetWidth(PlayerData.GetWidth(playerId));
     }
 
+    // Igual que en Movement, suscribe y desuscribe para actualizarse cuando Settings modifique PlayerData
     private void OnEnable()
     {
         PlayerData.OnWidthChanged += HandleWidthChanged;

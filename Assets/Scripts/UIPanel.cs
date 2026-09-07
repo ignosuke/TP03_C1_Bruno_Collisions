@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class UIPanel : MonoBehaviour
 {
+    public bool IsOpen()
+    {
+        return gameObject.activeInHierarchy;
+    }
+
     public void Open()
     {
         gameObject.SetActive(true); 

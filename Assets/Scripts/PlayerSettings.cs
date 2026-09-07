@@ -60,6 +60,7 @@ public class PlayerSettings : MonoBehaviour
         colorButtonImage.color = color;
     }
 
+    // Los sliders modifican los valores en PlayerData en lugar de tocar directamente los Players
     private void OnSpeedChanged(float value)
     {
         PlayerData.SetSpeed(playerId, value);
@@ -80,7 +81,3 @@ public class PlayerSettings : MonoBehaviour
     }
 
 }
-    // Queda pendiente hacer:
-    // Scripts SizeChanger y ColorChanger para que el jugador en escena pueda actualizarse en tiempo real al cambiar los settings.
-    // Court con los límites de la cancha y una trigger collision que sirva de arco
-    // Ball: ball, ball. BALL

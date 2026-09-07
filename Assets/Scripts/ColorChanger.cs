@@ -16,6 +16,7 @@ public class ColorChanger : MonoBehaviour
         SetColor(PlayerData.GetColor(playerId));
     }
 
+    // Igual que en Movement, suscribe y desuscribe para actualizarse cuando Settings modifique PlayerData
     private void OnEnable()
     {
         PlayerData.OnColorChanged += HandleColorChanged;

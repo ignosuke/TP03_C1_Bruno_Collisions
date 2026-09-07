@@ -28,6 +28,8 @@ public class Movement : MonoBehaviour
         SetSpeed(PlayerData.GetSpeed(playerId)); // Lee el valor inicial una vez
     }
 
+
+    // Suscribe y desuscribe al evento correspondiente de PlayerData cuando la configuración actualiza el valor
     private void OnEnable()
     {
         PlayerData.OnSpeedChanged += HandleSpeedChanged;

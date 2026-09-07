@@ -56,9 +56,11 @@ public class MainMenuUIManager : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
+
+    // Los paneles se muestran encima y se ocultan al salir
     private void OpenSettings()
     {
-        settingsPanel.Open(); // se muestra encima de MainMenu o Pausa, sin cerrarlos
+        settingsPanel.Open();
     }
 
     private void OpenCredits()
